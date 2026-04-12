@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumon Terminal Pro — Sam Isenstein</title>
+<meta name="description" content="To launch Season 2 of Severance, we put the Lumon Terminal Pro on apple.com. A fully designed product page for a computer from a fictional company, listed alongside real Apple products. The internet lost its mind.">
+<meta property="og:title" content="Lumon Terminal Pro — Sam Isenstein">
+<meta property="og:description" content="To launch Season 2 of Severance, we put the Lumon Terminal Pro on apple.com. A fully designed product page for a computer from a fictional company, listed alongside real Apple products. The internet lost its mind.">
+<meta property="og:image" content="https://samisenstein.com/images/og-image.webp">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://samisenstein.com/images/og-image.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://player.vimeo.com">
+<link rel="preconnect" href="https://f.vimeocdn.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-wordmark" href="/"><span>Sam Isenstein</span><span class="nav-dash">&mdash;</span><span class="nav-title">Group Creative Director</span></a>
+  <div class="nav-links"><a href="/about/">About + Contact</a></div>
+</nav>
+<div class="cs-header">
+  <a class="cs-back" href="/"><svg viewBox="0 0 12 12"><path d="M8 1L3 6l5 5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Work</a>
+  <div class="cs-title">Lumon Terminal Pro</div>
+  <div class="cs-meta"><span class="cs-meta-item">Apple</span></div>
+  <p class="cs-blurb">To launch Season 2 of Severance, we put the Lumon Terminal Pro on apple.com. A fully designed product page for a computer from a fictional company, listed alongside real Apple products. The internet lost its mind.</p>
+  <div class="cs-awards"><span class="cs-pill cs-pill-silver">Cannes Silver</span></div>
+</div>
+<div class="cs-body"><div class="cs-images"><img loading="lazy" src="/images/lumon-1.webp" alt="Lumon Terminal Pro"><img loading="lazy" src="/images/lumon-2.webp" alt="Lumon Terminal Pro"></div></div>
+
+<script>
+
+window.addEventListener('scroll', function() {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+
+/* Escape key */
+window.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var fs = document.getElementById('fs-player');
+    if (fs && fs.classList.contains('open')) {
+      closeFullscreen();
+    } else {
+      window.location.href = '/';
+    }
+  }
+});
+</script>
+</body>
+</html>

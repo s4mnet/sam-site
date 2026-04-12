@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Sam Isenstein</title>
+<meta name="description" content="Sam Isenstein is a Group Creative Director and copywriter based in New York.">
+<meta property="og:title" content="About — Sam Isenstein">
+<meta property="og:description" content="Sam Isenstein is a Group Creative Director and copywriter based in New York.">
+<meta property="og:image" content="https://samisenstein.com/images/og-image.webp">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://samisenstein.com/images/og-image.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://player.vimeo.com">
+<link rel="preconnect" href="https://f.vimeocdn.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-wordmark" href="/"><span>Sam Isenstein</span><span class="nav-dash">&mdash;</span><span class="nav-title">Group Creative Director</span></a>
+  <div class="nav-links"><a href="/about/" style="opacity:1">About + Contact</a></div>
+</nav>
+<section class="about-page">
+  <div class="about-inner">
+    <div class="about-photo-col">
+      <img src="/images/sam.webp" alt="Sam Isenstein">
+    </div>
+    <div class="about-text-col">
+      <div class="about-bio">
+        <p>Sam is a <strong>Group Creative Director</strong> and <strong>copywriter</strong> based in New York, with over a decade of experience at agencies like Grey, Firstborn, Anomaly, and in-house at Apple. He believes the deal between brands and people is simple: if you’re asking for someone’s time, make it worth it. That craft is what makes an idea matter. And the best work happens when the people making it know you’re in it with them. His work has been recognized at major awards festivals and appeared in the Super Bowl.</p>
+      </div>
+      <div class="about-quote">
+        “Sam dependably delivers high-caliber creative.<br>He’d be a great addition to any organization.”
+        <span class="about-quote-attr">Nick Law<br>VP of Marcom Integration, Apple</span>
+      </div>
+      <div class="about-contact-items">
+        <a id="email-link" href="#" class="about-contact-link" onclick="return false;">Email</a>
+        <a href="https://www.linkedin.com/in/samisenstein/" target="_blank" rel="noopener" class="about-contact-link">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+
+window.addEventListener('scroll', function() {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+/* EMAIL */
+var el = document.getElementById('email-link');
+var u = 'sam.isenstein'; var d = 'gmail.com';
+var addr = u + '@' + d;
+var emailCopied = false;
+el.addEventListener('mouseenter', function() {
+  if (!emailCopied) { el.textContent = addr; el.classList.add('showing-email'); }
+});
+el.addEventListener('mouseleave', function() {
+  if (!emailCopied) { el.textContent = 'Email'; el.classList.remove('showing-email'); }
+});
+el.addEventListener('click', function(e) {
+  e.preventDefault();
+  navigator.clipboard.writeText(addr).then(function() {
+    emailCopied = true;
+    el.textContent = addr + ' copied'; el.classList.add('showing-email');
+    setTimeout(function() { emailCopied = false; el.textContent = 'Email'; el.classList.remove('showing-email'); }, 2500);
+  });
+});
+</script>
+</body>
+</html>
