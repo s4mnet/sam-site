@@ -68,7 +68,9 @@ nav.scrolled { background: rgba(8,8,7,0.85); backdrop-filter: blur(12px); -webki
   50%  { transform: translate(-51%, -50.5%) scale(1.03); }
   100% { transform: translate(-50%, -50%) scale(1.0); }
 }
-.work-item img.tile-media:not(.tile-poster) { animation: kenburns 14s ease-in-out infinite; }
+@media (min-width: 768px) {
+  .work-item img.tile-media:not(.tile-poster) { animation: kenburns 14s ease-in-out infinite; }
+}
 .work-scrim {
   position: absolute; inset: 0; background: rgba(8,8,7,0.75);
   z-index: 2; transition: opacity 0.4s var(--ease);
