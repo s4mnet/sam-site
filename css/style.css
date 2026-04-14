@@ -232,6 +232,7 @@ nav.scrolled { background: rgba(8,8,7,0.85); backdrop-filter: blur(12px); -webki
   max-width: 46ch;
 }
 .about-bio strong { font-weight: 400; color: var(--cream); }
+.about-bio p + p { margin-top: 1em; }
 .about-quote {
   font-family: var(--serif); font-weight: 400; font-style: italic;
   font-size: 1rem; line-height: 1.55; color: rgba(237,233,225,0.7);
