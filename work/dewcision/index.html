@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEWcision VR — Sam Isenstein</title>
+<meta name="description" content="To bring a retired MTN DEW flavor back, fans had to race for it. A VR game where you tear through impossible worlds alongside real NASCAR legends. Bring your Dramamine.">
+<meta property="og:title" content="DEWcision VR — Sam Isenstein">
+<meta property="og:description" content="To bring a retired MTN DEW flavor back, fans had to race for it. A VR game where you tear through impossible worlds alongside real NASCAR legends. Bring your Dramamine.">
+<meta property="og:image" content="https://samisenstein.com/images/mtndew-title.webp">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://samisenstein.com/images/mtndew-title.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://player.vimeo.com">
+<link rel="preconnect" href="https://f.vimeocdn.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-wordmark" href="/"><span>Sam Isenstein</span><span class="nav-dash">&mdash;</span><span class="nav-title">Group Creative Director</span></a>
+  <div class="nav-links"><a href="/about/">About + Contact</a></div>
+</nav>
+<div class="cs-header">
+  <a class="cs-back" href="/"><svg viewBox="0 0 12 12"><path d="M8 1L3 6l5 5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Work</a>
+  <div class="cs-title">DEWcision VR</div>
+  <div class="cs-meta"><span class="cs-meta-item">MTN DEW</span><div class="cs-meta-divider"></div><span class="cs-meta-item">Jay Harwood</span><div class="cs-meta-divider"></div><span class="cs-meta-item">Firstborn</span></div>
+  <p class="cs-blurb">To bring a retired MTN DEW flavor back, fans had to race for it. A VR game where you tear through impossible worlds alongside real NASCAR legends. Bring your Dramamine.</p>
+
+</div>
+<div class="cs-body"><div class="cs-videos">
+      <div class="cs-video-bg">
+        <iframe src="https://player.vimeo.com/video/1183222082?background=1&autoplay=1&loop=1&muted=1&byline=0&title=0&portrait=0&dnt=1" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div></div><div class="cs-images"><img loading="lazy" src="/images/mtndew-1.webp" alt="DEWcision VR"><img loading="lazy" src="/images/mtndew-2.webp" alt="DEWcision VR"><img loading="lazy" src="/images/mtndew-3.webp" alt="DEWcision VR"></div></div>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+
+window.addEventListener('scroll', function() {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+
+/* BACKGROUND VIDEO AUTOPLAY */
+document.querySelectorAll('.cs-video-bg iframe').forEach(function(iframe, i) {
+  setTimeout(function() {
+    try {
+      var player = new Vimeo.Player(iframe);
+      player.ready().then(function() {
+        player.play().catch(function(){});
+      }).catch(function(){});
+    } catch(e) {}
+  }, i * 200);
+});
+/* Escape key */
+window.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var fs = document.getElementById('fs-player');
+    if (fs && fs.classList.contains('open')) {
+      closeFullscreen();
+    } else {
+      window.location.href = '/';
+    }
+  }
+});
+</script>
+</body>
+</html>
